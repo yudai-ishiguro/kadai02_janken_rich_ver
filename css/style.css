@@ -1,0 +1,121 @@
+@media (max-width: 767px){
+    header, body, footer{
+        font-size: 14px;
+    }
+}
+
+@media (min-width: 768px) and (max-width:1200px){
+    header, body, footer{
+        font-size: 14x;
+    }
+}
+
+/* headerここから */
+.header {
+    background-color: #ffffee;
+    height: 50px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: relative;
+  }
+  .logo {
+    width: 25%;
+    height: 30px;
+    padding: 10px;
+  }
+  .logo_img {
+    width: 100%;
+  }
+  .hamburger-menu {
+    width: 50px;
+    height: 50px;
+    position: relative;
+    border: none;
+    background: transparent;
+    appearance: none;
+    padding: 0;
+    cursor: pointer;
+  }
+  .hamburger-menu__bar {
+    display: inline-block;
+    width: 44%;
+    height: 2px;
+    background: goldenrod;
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    transition: .5s;
+  }
+  .hamburger-menu__bar:first-child {
+    top: 16px;
+  }
+  .hamburger-menu__bar:nth-child(2) {
+    top: 24px;
+  }
+  .hamburger-menu__bar:last-child {
+    top: 32px;
+  }
+  .hamburger-menu--open .hamburger-menu__bar {
+    top: 50%;
+  }
+  .hamburger-menu--open .hamburger-menu__bar:first-child {
+    transform: translateX(-50%) translateY(-50%) rotate(45deg);
+  }
+  .hamburger-menu--open .hamburger-menu__bar:last-child {
+    transform: translateX(-50%) translateY(-50%) rotate(-45deg);
+  }
+  .hamburger-menu--open .hamburger-menu__bar:nth-child(2) {
+    display: none;
+  }
+  .navigation {
+    display: none;
+    background: goldenrod;
+    position: absolute;
+    top: 50px;
+    right: 0;
+    width: 25%;
+    z-index: 9999;
+  }
+  .navigation__list {
+    text-align: center;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+  }
+  .navigation__list-item {
+    border-bottom: solid 1px #ffd700;
+  }
+  .navigation__list-item:first-child {
+    border-top: solid 1px #ffd700;
+  }
+  .navigation__link {
+    color: #fff;
+    font-weight: 700;
+    text-decoration: none;
+    display: block;
+    padding: 24px 0;
+    transition: .5s;
+  }
+  @media (hover: hover) and (pointer: fine) {
+    .navigation__link:hover {
+      color: goldenrod;
+      background: #ffffcc;
+    }
+    .navigation__list-item:hover {
+        border-bottom: solid 2px #ffd700;
+    }
+    .navigation__list-item:first-child:hover {
+        border-top: solid 2px #ffd700;
+    }
+  }
+
+/* bodyここから */
+.mainvisual_container{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.mainvisual_img{
+    width:100%
+}

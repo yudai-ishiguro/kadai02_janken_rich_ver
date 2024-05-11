@@ -1,0 +1,376 @@
+/* サイト全体幅の調整 */
+body {
+    width: 1200px;
+    margin: auto;
+}
+
+/* ヘッダーはここから */
+.header {
+display: flex;
+justify-content: space-between;
+font-size: larger;
+color: gray;
+margin-top: 20px;
+margin-left: 30px;
+margin-right: 30px;
+}
+
+.logo {
+    /* margin: 20px; */
+}
+
+ul {
+    list-style-type: style none;
+}
+
+li {
+    display: inline;
+}
+
+ul.menu_bar li {
+    margin-right: 20px;
+}
+
+.menu_bar {
+    /* margin-top: 20px; */
+}
+
+.text:hover {
+    color: goldenrod;
+    font-weight: 900;
+}
+
+a {
+    color: inherit;
+    text-decoration: none;
+}
+/* ヘッダーはここまで */
+
+/* メインビジュアルここから */
+.main_visual {
+position: relative;
+}
+
+.main_visual img {
+    width: 100%;
+    height: auto;
+}
+
+.catch {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    color: white;
+    text-align: center;
+    font-size: xx-large;
+    font-weight: bolder;
+}
+
+.school_name {
+    margin-top: 10px;
+    font-size: x-large;
+    font-weight: 500;   
+}
+/* メインビジュアルここまで */
+
+/* ABOUTここから */
+.about {
+    text-align: center;
+    margin: 30px;
+}
+
+.title {
+    font-size: larger;
+    font-weight: 900;
+    color: goldenrod;
+}
+
+.line-height-3 {
+    line-height: 3;
+}
+
+.line-height-1-5 {
+    line-height: 1.5;
+}
+
+.about_visual {
+    display: flex;
+    /* 横スクロール */
+    /* overflow-x: scroll; */
+}
+
+.about_visual img {
+    width: 25vw;
+}
+
+/* ABOUTここまで */
+
+/* COURSEここから */
+.course_top {
+    font-size: larger;
+    font-weight: 900;
+    text-align: center;
+    margin-top: 60px;
+    margin-bottom: 30px;
+}
+
+.explain {
+    text-align: center;
+    line-height: 1.5;
+    margin-bottom: 60px;
+}
+
+.course_content1 {
+    display: flex;
+    }
+
+.left_margin {
+    margin-left: 50px;
+}
+
+h2 {
+    margin-top: 120px;
+    margin-bottom: 40px;
+    font-size: larger;
+    font-weight: 900;
+}
+
+.line-height-2 {
+    line-height: 2;
+}
+
+.course_content2 {
+    display: flex;
+    justify-content: flex-end;
+}
+
+.right_margin {
+    margin-right: 50px;
+}
+
+.course_content3 {
+    display: flex;
+}
+
+.photo_resize img {
+    width: calc(100vw / 2);
+    height: 100%;
+}
+
+/* COURSEここまで */
+
+/* NEWSここから */
+.news_top {
+    font-size: larger;
+    font-weight: 900;
+    color: goldenrod;
+    text-align: center;
+    margin-top: 60px;
+    margin-bottom: 30px;
+}
+
+.news_title {
+    text-align: center;
+    margin-bottom: 60px;
+}
+
+.news_body {
+display: flex;
+justify-content: center;
+}
+
+.news_block:hover {
+    transform: scale(1.1);
+}
+
+.news_width {
+    width: 300px;
+    margin: 0px 15px;
+}
+
+.news_date {
+    margin-top: 30px;
+    margin-bottom: 24px;
+}
+
+.news_text {
+    width: fit-content;
+    font-size: 14px;
+}
+
+.news_text p {
+    text-align:justify
+    text-align-last:justify
+}
+
+.container_for_button {
+    display: flex;
+    justify-content: center;
+}
+
+.button {
+    display: inline-block;
+    width: 300px;
+    height: 60px;
+    line-height: 60px;
+    background-color: goldenrod;
+    font-size: 18px;
+    color: white;
+    text-align: center;
+}
+
+.button_margin {
+    margin: 60px 0;
+}
+
+.border_line {
+    border: 2px solid;
+}
+
+.button:hover {
+    background-color: white;
+    color: goldenrod;
+}
+/* NEWSここまで */
+
+/* ACCESSここから */
+.container_for_access {
+    background-color: rgb(248, 249, 250);
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.access_top {
+    font-size: larger;
+    font-weight: 900;
+    text-align: center;
+    margin-top: 60px;
+}
+
+.access_title {
+    text-align: center;
+    margin-top: 30px;
+    margin-bottom: 60px;
+}
+
+.width-fix {
+    width: 120px;
+}
+
+.table_1 {
+    margin-top: 60px;
+    margin-bottom: 60px;
+}
+
+.td_1 {
+    height: 30px;
+}
+
+/* ACCESSここまで */
+
+/* CONTACTここから */
+.contact_top {
+    font-size: larger;
+    font-weight: 900;
+    text-align: center;
+    margin-top: 60px;
+    margin-bottom: 30px;
+}
+
+.contact_title {
+    text-align: center;
+    margin-bottom: 60px;
+}
+
+.contact_text1 {
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+.contact_text2 {
+    text-align: center;
+    margin-bottom: 70px;
+}
+
+/* コンタクトフォームここから */
+.contact_form_container {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.table_design {
+    border-top:solid 3px #bfbfbf;
+    border-spacing: 0;
+}
+
+.table_design td {
+    padding: 8px;
+    border-bottom:solid 3px #bfbfbf;
+    border-right: solid 3px #bfbfbf;
+}
+
+.table_design td:last-child {
+    border-right: none;
+}
+
+.form_title {
+    width: 240px;
+}
+
+.form_parts {
+    width: 400px;
+}
+
+.textbox_1 {
+    width: 25em;
+    max-width: 100%;
+}
+
+.text_area {
+ width: 25em;
+ max-width: 100%;
+ height: 6em;
+ line-height: 1.5;
+}
+
+select {
+    border-color: #bfbfbf;
+    height: 3em;
+    width: 340px;
+}
+
+.height_center {
+    /* まだ入力していない */
+}
+
+.checkboxes {
+    display: flex;
+    flex-direction: column;
+}
+
+/* コンタクトフォームここまで */
+
+.button_margin_ver2 {
+    margin-top: 30px;
+    margin-bottom: 140px;
+}
+/* CONTACTここまで */
+
+/* Footer*/
+.footer_container {
+    width: 100%;
+    height: 60px;
+    background-color: #707070;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.footer_text {
+    color: white;
+}
