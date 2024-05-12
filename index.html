@@ -26,7 +26,7 @@
   <nav class="navigation">
     <ul class="navigation__list">
       <li class="navigation__list-item"><a href="#ABOUT" class="navigation__link">ABOUT</a></li>
-      <li class="navigation__list-item"><a href="#" class="navigation__link">COURSE</a></li>
+      <li class="navigation__list-item"><a href="#COURSE" class="navigation__link">COURSE</a></li>
       <li class="navigation__list-item"><a href="#" class="navigation__link">NEWS</a></li>
       <li class="navigation__list-item"><a href="#" class="navigation__link">ACCESS</a></li>
       <li class="navigation__list-item"><a href="#" class="navigation__link">CONTACT</a></li>
@@ -80,20 +80,39 @@
     </section>
 
     <section class="course_contents_container">
-      <div class="course_content1">
-        <div class="course_content1_img">
+      <div class="course_content">
+        <div class="course_content_img">
           <img src="./img/course_01.jpg" alt="コースイメージ１">
         </div>
-        <div class="content1_description">
+        <div class="content_description">
           <div class="course_content1_text">
-            <p>本格的な農園を使った実地研修</p>
-            <p>ここに長い文章を入れる</p>
+            <p class="text_bold">本格的な農園を使った実地研修<wbr></p>
+            <p id="longText1"><span>ここに長い文章1を入れる</span></p>
           </div>
         </div>
       </div>
-
-
-
+      <div class="course_content">
+        <div class="content_description">
+          <div class="course_content2_text">
+            <p class="text_bold">必要な知識もしっかりと取得</p>
+            <p id="longText2"><span>ここに長い文章2を入れる</span></p>
+          </div>
+        </div>
+        <div class="course_content_img">
+          <img src="./img/course_02.jpg" alt="コースイメージ２">
+        </div>
+      </div>
+      <div class="course_content">
+        <div class="course_content_img">
+          <img src="./img/course_03.jpg" alt="コースイメージ３">
+        </div>
+        <div class="content_description">
+          <div class="course_content3_text">
+            <p class="text_bold">卒業制作はテイスティング審査あり<wbr></p>
+            <p id="longText3"><span>ここに長い文章3を入れる</span></p>
+          </div>
+        </div>
+      </div>
     </section>
 
 
@@ -107,7 +126,16 @@ $(function () {
     $('.hamburger-menu').toggleClass('hamburger-menu--open')
   });
 });
-</script>
 
+const lT1 ="チーズアカデミーでは、本格的な農園を使った実地研修を行うことができます。プロとして活躍するチーズ職人も<wbr>使用するような、広大で環境も整った農園を余すところ<wbr>なく使い、卒業時には本格的なチーズを自分の力で作れる<wbr>実践力の養成を目指します。";
+$("#longText1").html(lT1);
+
+const lT2 ="チーズ作りには、しっかりとした職に関する知識が<wbr>欠かせません。チーズアカデミーでは、一流講師陣による、<wbr>チーズ作りに必要ないろはを余すところなく学べます。<wbr>チーズそのものでなく、栄養学全般を学ぶことも<wbr>可能ですので、チーズ以外への展開も夢ではないでしょう。"
+$("#longText2").html(lT2);
+
+const lT3 ="チーズアカデミーでは最後の2ヶ月間で卒業制作を実施。<wbr>卒業制作として、チーズ作りを実際に行います。卒業後、<wbr>一般参加によるテイスティング審査があるため、作り手の<wbr>目線だけでなく、消費者の目線から、卒業制作作品としての<wbr>チーズを、しっかりと評価いただくことができます。"
+$("#longText3").html(lT3);
+
+</script>
 
 </html>
