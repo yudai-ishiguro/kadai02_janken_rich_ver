@@ -248,3 +248,25 @@ section{
         overflow-wrap: break-word;
     }
 }
+
+.course_contents_container{
+    position: relative;
+    top: 60px;
+    max-width: 1200px;
+}
+
+.course_content1{
+    width: 100%;
+    display: flex;
+    justify-content: space-around;
+}
+
+.course_content1_img{
+    width: 50%;
+}
+
+.course_content1_img img{
+    max-width: 100%;
+    height: auto;
+    display:block;
+}
