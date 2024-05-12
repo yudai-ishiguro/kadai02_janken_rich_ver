@@ -115,6 +115,73 @@
       </div>
     </section>
 
+<!--ニュース  -->
+<section class="news" id="NEWS">
+  <div class="course_title">NEWS</div>
+  <div class="course_subTitle">
+    <P>ニュース</P>
+  </div>
+</section>
+<!-- カルーセルその２ -->
+<section class="carousel2">
+  <div class="contains">
+    <input class="slide_select" type="radio" id="SlideA" name="slide_check" checked />
+    <input class="slide_select" type="radio" id="SlideA" name="slide_check" />
+    <input class="slide_select" type="radio" id="SlideA" name="slide_check" />
+  </div>
+  <!-- スライド1番目 -->
+  <div class="slide">
+    <div class="scroll_controler">
+      <label class="scroll_button scroll_prev" for="SlideC"></label>
+      <label class="scroll_button scroll_next" for="SlideB"></label>
+    </div>
+    <div class="contains2">
+      <div class="carousel2_pic">
+        <img src="./img/news_img.jpg" alt="ニュースのイメージ">
+      </div>
+      <div class="carousel_2text">
+        <P class="news_date">2016/11/18</P>
+        <p id="longText4"><span>ここに長い文章4を入れる</span></p>
+      </div>
+    </div>
+    <!-- スライド2番目 -->
+    <div class="slide">
+      <div class="scroll_controler">
+        <label class="scroll_button scroll_prev" for="SlideA"></label>
+        <label class="scroll_button scroll_next" for="SlideC"></label>
+      </div>
+      <div class="contains2">
+        <div class="carousel2_pic">
+          <img src="./img/news_img.jpg" alt="ニュースのイメージ">
+        </div>
+        <div class="carousel_2text">
+          <P class="news_date">2016/11/18</P>
+          <p id="longText4"><span>ここに長い文章4を入れる</span></p>
+        </div>
+      </div>
+    <!-- スライド3番目 -->
+    <div class="slide">
+      <div class="scroll_controler">
+        <label class="scroll_button scroll_prev" for="SlideB"></label>
+        <label class="scroll_button scroll_next" for="SlideA"></label>
+      </div>
+      <div class="contains2">
+        <div class="carousel2_pic">
+          <img src="./img/news_img.jpg" alt="ニュースのイメージ">
+        </div>
+        <div class="carousel_2text">
+          <P class="news_date">2016/11/18</P>
+          <p id="longText4"><span>ここに長い文章4を入れる</span></p>
+        </div>
+      </div>
+      <!-- スライド移動用ボタン -->
+      <div class="move_controler">
+        <label class="button_move" for="SlideA"></label>
+        <label class="button_move" for="SlideB"></label>
+        <label class="button_move" for="SlideC"></label>
+      </div>
+  </div>
+</section>
 
 </body>
 
@@ -136,6 +203,8 @@ $("#longText2").html(lT2);
 const lT3 ="チーズアカデミーでは最後の2ヶ月間で卒業制作を実施。<wbr>卒業制作として、チーズ作りを実際に行います。卒業後、<wbr>一般参加によるテイスティング審査があるため、作り手の<wbr>目線だけでなく、消費者の目線から、卒業制作作品としての<wbr>チーズを、しっかりと評価いただくことができます。"
 $("#longText3").html(lT3);
 
+const lT4="チーズアカデミー卒業生のコスゲさんによる<wbr>チーズだけをふんだんに使用した話題のピザ屋<wbr>「Kosuge Pizza」が渋谷でオープンしました！"
+$("#longText4").html(lT4);
 </script>
 
 </html>

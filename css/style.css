@@ -303,3 +303,100 @@ section{
         word-break: keep-all;
         overflow-wrap: break-word;
 }
+/* NEWEのセクション */
+.news{
+    position: relative;
+    top:50px;
+    margin-top: 60px;
+    margin-bottom: 60px;
+    text-align: center;
+    line-height: 2;
+}
+.course div{
+    margin-top: 40px;
+}
+
+.course_title{
+    font-weight: bolder;
+    color:#ffd700;
+    font-size: 24px;
+}
+.course_subTitle{
+    font-size: 18px;
+}
+.carousel2{
+    display: flex;
+    justify-content: center;
+}
+.contains, .contains2{
+    width: 350px;
+    height: 400px;
+    overflow: hidden;
+    position: relative;
+    padding: 0;
+    list-style: none;
+    background-color: #ffd700;
+}
+.contains2{
+    line-height: 2;
+}
+.contains2 img{
+    width: 100%;
+    height: auto;
+}
+.slide_select{
+    display: none;
+}
+.slide{
+    width: 350px;
+    height: 400px;
+    position: absolute;
+    /* opacity: 0; */
+}
+.scroll_button{
+    position: absolute;
+    display: block;
+    height: 30px;
+    width: 30px;
+    top: 40%;
+    margin-top: -20px;
+    border-width: 5px 5px 0 0;
+    border-style: solid;
+    border-color: #fdfdfd;
+    cursor: pointer;
+    opacity: 0.5;
+    z-index: 3;
+}
+.scroll_button:hover {
+    opacity: 1;
+}
+.scroll_prev{
+    left: 15px;
+    transform: rotate(-135deg);
+}
+.scroll_next{
+    right: 15px;
+    transform:rotate(45deg);
+}
+.move_controler{
+    position:absolute;
+    bottom: 20px;
+    width: 100%;
+    text-align: center;
+}
+.button_move{
+    display: inline-block;
+    height: 15px;
+    width: 15px;
+    margin: 0 2px;
+    border-radius: 100%;
+    cursor: pointer;
+    opacity: 0.5;
+    z-index: 2;
+}
+.button_move:hover{
+    opacity: 1;
+}
+.button_move{
+    background-color: #fdfdfd;
+}
