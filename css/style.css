@@ -21,7 +21,7 @@
 .logo{
     height: auto;
     width: 200px;
-    padding: 10px;
+    padding: 0 10px;
 }
 
 .logo img{
@@ -112,7 +112,7 @@
     }
   }
 
-/* bodyここから */
+/* メインビジュアルここから */
 section{
     z-index: 1;
 }
@@ -160,8 +160,9 @@ section{
 /* ABOUTのセクション */
 .about{
     position: relative;
-    top:50px;
-    margin-top: 60px;
+    top:60px;
+    padding-top: 60px;
+    margin-top: -60px;
     margin-bottom: 0;
     text-align: center;
     line-height: 2;
@@ -193,7 +194,7 @@ section{
     height:255px;
     display: flex;
     overflow: hidden;
-    margin: 0 auto; 
+    margin: 0 auto 10px; 
 }
 
 /* カルーセル内の画像 */
@@ -224,15 +225,16 @@ section{
 /* COURSEのセクション */
 .course{
     position: relative;
-    top:50px;
-    margin-top: 60px;
+    top:60px;
+    padding-top: 60px;
+    margin-top: -60px;
     margin-bottom: 60px;
     text-align: center;
     line-height: 2;
 }
-/* .course div{
+.course div{
     margin-top: 40px;
-} */
+}
 
 .course_title{
     font-weight: bolder;
@@ -241,7 +243,7 @@ section{
 }
 .course_subTitle{
     font-size: 18px;
-    margin-top: 40px;
+    /* margin-top: 40px; */
 }
 @media screen and (max-width:680px){
     .course_subTitle{
@@ -306,18 +308,22 @@ section{
 }
 /* NEWEのセクション */
 .news{
-    position: relative;
-    top:50px;
+    /* position: relative;
+    top:90px; */
+    padding-top: 60px;
     margin-top: 60px;
+    /* padding-bottom: 60px; */
     margin-bottom: 60px;
     text-align: center;
     line-height: 2;
 }
-/* .news div{
-    margin-top: 40px;
-} */
+.news div{
+    margin-top: 30px;
+}
 
 .carousel2{
+    /* position: relative;
+    top: 90px; */
     display: flex;
     justify-content: center;
 }
@@ -399,3 +405,184 @@ section{
 .slide_select:nth-of-type(2):checked ~ .move_controler .button_move:nth-of-type(2){opacity: 1;}
 .slide_select:nth-of-type(3):checked ~ .slide:nth-of-type(3){opacity: 1;}
 .slide_select:nth-of-type(3):checked ~ .move_controler .button_move:nth-of-type(3){opacity: 1;}
+/* Moreボタン */
+.container_for_button {
+    display: flex;
+    justify-content: center;
+}
+
+.button {
+    display: inline-block;
+    width: 300px;
+    height: 60px;
+    line-height: 60px;
+    background-color: goldenrod;
+    font-size: 18px;
+    color: white;
+    text-align: center;
+}
+
+.button_margin {
+    margin: 60px 0;
+}
+
+.border_line {
+    border: 2px solid;
+}
+
+.button:hover {
+    background-color: white;
+    color: goldenrod;
+}
+
+/* ACCESSここから */
+.container_for_access {
+    background-color: rgb(248, 249, 250);
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.access_top {
+    font-size: larger;
+    font-weight: 900;
+    text-align: center;
+    padding-top: 60px;
+    margin-top: -50px;
+    color:#ffd700;
+}
+
+.access_title {
+    text-align: center;
+    margin-top: 30px;
+    margin-bottom: 60px;
+}
+
+.width-fix {
+    width: 120px;
+}
+
+.table_1 {
+    margin-top: 60px;
+    margin-bottom: 60px;
+}
+
+.td_1 {
+    height: 30px;
+}
+
+/* ACCESSここまで */
+
+/* CONTACTここから */
+.contact_top {
+    font-size: larger;
+    font-weight: 900;
+    text-align: center;
+    margin-top: 60px;
+    margin-bottom: 30px;
+    color:#ffd700;
+}
+
+/* .contact_top:before{
+    content:"";
+    display: block;
+    height: 50px;
+    margin-top: -50px;
+    background-color: #707070;
+} */
+
+.contact_title {
+    text-align: center;
+    margin-bottom: 60px;
+}
+
+.contact_text1 {
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+.contact_text2 {
+    text-align: center;
+    margin-bottom: 70px;
+}
+
+/* コンタクトフォームここから */
+.contact_form_container {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.table_design {
+    border-top:solid 3px #bfbfbf;
+    border-spacing: 0;
+}
+
+.table_design td {
+    padding: 8px;
+    border-bottom:solid 3px #bfbfbf;
+    border-right: solid 3px #bfbfbf;
+}
+
+.table_design td:last-child {
+    border-right: none;
+}
+
+.form_title {
+    width: 240px;
+}
+
+.form_parts {
+    width: 400px;
+}
+
+.textbox_1 {
+    width: 25em;
+    max-width: 100%;
+}
+
+.text_area {
+ width: 25em;
+ max-width: 100%;
+ height: 6em;
+ line-height: 1.5;
+}
+
+select {
+    border-color: #bfbfbf;
+    height: 3em;
+    width: 340px;
+}
+
+.height_center {
+    /* まだ入力していない */
+}
+
+.checkboxes {
+    display: flex;
+    flex-direction: column;
+}
+
+/* コンタクトフォームここまで */
+
+.button_margin_ver2 {
+    margin-top: 30px;
+    margin-bottom: 140px;
+}
+/* CONTACTここまで */
+
+/* Footer*/
+.footer_container {
+    width: 100%;
+    height: 60px;
+    background-color: #707070;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.footer_text {
+    color: white;
+}
