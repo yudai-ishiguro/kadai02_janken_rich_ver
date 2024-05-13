@@ -162,7 +162,7 @@ section{
     position: relative;
     top:50px;
     margin-top: 60px;
-    margin-bottom: 80px;
+    margin-bottom: 0;
     text-align: center;
     line-height: 2;
     font-size: 16px;
@@ -230,9 +230,9 @@ section{
     text-align: center;
     line-height: 2;
 }
-.course div{
+/* .course div{
     margin-top: 40px;
-}
+} */
 
 .course_title{
     font-weight: bolder;
@@ -241,6 +241,7 @@ section{
 }
 .course_subTitle{
     font-size: 18px;
+    margin-top: 40px;
 }
 @media screen and (max-width:680px){
     .course_subTitle{
@@ -312,18 +313,10 @@ section{
     text-align: center;
     line-height: 2;
 }
-.course div{
+/* .news div{
     margin-top: 40px;
-}
+} */
 
-.course_title{
-    font-weight: bolder;
-    color:#ffd700;
-    font-size: 24px;
-}
-.course_subTitle{
-    font-size: 18px;
-}
 .carousel2{
     display: flex;
     justify-content: center;
@@ -335,10 +328,10 @@ section{
     position: relative;
     padding: 0;
     list-style: none;
-    background-color: #ffd700;
 }
 .contains2{
     line-height: 2;
+    background-color: #ffd700;
 }
 .contains2 img{
     width: 100%;
@@ -351,7 +344,7 @@ section{
     width: 350px;
     height: 400px;
     position: absolute;
-    /* opacity: 0; */
+    opacity: 0;
 }
 .scroll_button{
     position: absolute;
@@ -370,15 +363,15 @@ section{
 .scroll_button:hover {
     opacity: 1;
 }
-.scroll_prev{
+.scroll_prev {
     left: 15px;
     transform: rotate(-135deg);
 }
-.scroll_next{
+.scroll_next {
     right: 15px;
     transform:rotate(45deg);
 }
-.move_controler{
+.move_controler {
     position:absolute;
     bottom: 20px;
     width: 100%;
@@ -400,3 +393,9 @@ section{
 .button_move{
     background-color: #fdfdfd;
 }
+.slide_select:nth-of-type(1):checked ~ .slide:nth-of-type(1){opacity: 1;}
+.slide_select:nth-of-type(1):checked ~ .move_controler .button_move:nth-of-type(1){opacity: 1;}
+.slide_select:nth-of-type(2):checked ~ .slide:nth-of-type(2){opacity: 1;}
+.slide_select:nth-of-type(2):checked ~ .move_controler .button_move:nth-of-type(2){opacity: 1;}
+.slide_select:nth-of-type(3):checked ~ .slide:nth-of-type(3){opacity: 1;}
+.slide_select:nth-of-type(3):checked ~ .move_controler .button_move:nth-of-type(3){opacity: 1;}
