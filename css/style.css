@@ -479,9 +479,13 @@ section{
     font-size: larger;
     font-weight: 900;
     text-align: center;
-    margin-top: 60px;
+    /* margin-top: 60px; */
     margin-bottom: 30px;
     color:#ffd700;
+}
+
+.contact_top h1{
+    padding-top: 60px;
 }
 
 /* .contact_top:before{
@@ -552,17 +556,26 @@ section{
 
 select {
     border-color: #bfbfbf;
-    height: 3em;
+    height: 2em;
     width: 340px;
+    margin: 8px 0;
 }
 
-.height_center {
-    /* まだ入力していない */
+option {
+    vertical-align: top;
 }
 
 .checkboxes {
     display: flex;
     flex-direction: column;
+}
+
+.form_title, .line-height-1-5{
+    line-height: 1.5;
+}
+
+.valign td{
+    vertical-align: top;
 }
 
 /* コンタクトフォームここまで */
