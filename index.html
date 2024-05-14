@@ -6,7 +6,7 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
-  <title>チーズアカデミー</title>
+  <title>チーズアカデミー リッチバージョン</title>
   <link rel="stylesheet" href="css/reset.css">
   <link rel="stylesheet" href="css/style.css">
 </head>
@@ -249,15 +249,15 @@
       <table class="table_design">
           <tr>
               <td class="form_title">名前</td>
-              <td class="form_parts"><input type="text" class="textbox_1"></td>
+              <td class="form_parts"><input id="text_area_namae" type="text" class="textbox_1"></td>
           </tr>
           <tr>
               <td class="form_title">カナ</td>
-              <td class="form_parts"><input type="text" class="textbox_1"></td>
+              <td class="form_parts"><input  id="text_area_kana" type="text" class="textbox_1"></td>
           </tr>
           <tr>
               <td class="form_title">メールアドレス</td>
-              <td class="form_parts"><input type="text" class="textbox_1"></td>
+              <td class="form_parts"><input  id="text_area_meado" type="text" class="textbox_1"></td>
           </tr>
           <tr class="valign">
               <td class="form_title line-height-1-5">チーズアカデミーを<br>知った切っ掛け</td>
@@ -291,13 +291,13 @@
           </tr>
           <tr class="valign">
               <td class="form_title">詳細</td>
-              <td class="form_parts"><textarea class="text_area"></textarea></td>
+              <td class="form_parts"><textarea  id="text_area_shousai" class="text_area"></textarea></td>
           </tr>
       </table>
   </div>
 
   <div class="container_for_button">
-      <div class="button button_margin_ver2 border_line">送信</div>
+      <div class="button button_margin_ver2 border_line" id="save">送信</div>
  </div>
 </section>
 <!-- CONTACTここまで -->
@@ -338,6 +338,15 @@ $("#longText5").html(lT5);
 
 const lT6="チーズアカデミー卒業生のコスゲさんによる<wbr>チーズだけをふんだんに使用した話題のピザ屋<wbr>「Kosuge Pizza」が渋谷でオープンしました！"
 $("#longText6").html(lT6);
+
+// Saveクリックイベント
+$("#save").on("click",function(){
+  const v = $("#text_area_namae").val();
+  localStorage.setItem("namae",v);
+  alert("Saveしました");
+})
+
+
 
 </script>
 

@@ -433,6 +433,7 @@ section{
 .button:hover {
     background-color: white;
     color: goldenrod;
+    cursor: pointer;
 }
 
 /* ACCESSここから */
