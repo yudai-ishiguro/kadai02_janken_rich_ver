@@ -185,7 +185,56 @@
  </div> 
 </section>
 
-<div class="container_for_button">
+<!-- NEWS（More）ここから -->
+<section class="content hidden">
+  <div class="news_body">
+       <!-- NEWS(More)その１ -->
+      <div class="news_block news_width">
+          <div>
+              <img src="./img/news_img.jpg" alt="pizza">
+          </div>
+          <div class="news_date">
+              <p>2016/11/18</p>
+          </div>
+          <div class="news_text">
+              <p class="line-height-2">チーズアカデミー卒業生のコスゲさんによる</p>
+              <p class="line-height-2">チーズだけをふんだんに使用した話題のピザ屋</p>
+              <p class="line-height-2">「Kosuge Pizza」が渋谷でオープンしました！</p>
+          </div>
+      </div>
+      <!-- NEWS(More)その２ -->
+      <div class="news_block news_width">
+          <div>
+              <img src="./img/news_img.jpg" alt="pizza">
+          </div>
+          <div class="news_date">
+              <p>2016/11/18</p>
+          </div>
+          <div class="news_text">
+              <p class="line-height-2">チーズアカデミー卒業生のコスゲさんによる</p>
+              <p class="line-height-2">チーズだけをふんだんに使用した話題のピザ屋</p>
+              <p class="line-height-2">「Kosuge Pizza」が渋谷でオープンしました！</p>
+          </div>
+      </div>
+      <!-- NEWS(More)その３ -->
+      <div class="news_block news_width">
+          <div>
+              <img src="./img/news_img.jpg" alt="pizza">
+          </div>
+          <div class="news_date">
+              <p>2016/11/18</p>
+          </div>
+          <div class="news_text">
+              <p class="line-height-2">チーズアカデミー卒業生のコスゲさんによる</p>
+              <p class="line-height-2">チーズだけをふんだんに使用した話題のピザ屋</p>
+              <p class="line-height-2">「Kosuge Pizza」が渋谷でオープンしました！</p>
+          </div>
+      </div>       
+  </div>
+</section>
+<!-- NEWS（More）ここまで -->
+
+<div id="toggleButton" class="container_for_button">
   <div class="button button_margin border_line">More</div>
 </div>
 
@@ -263,7 +312,7 @@
               <td class="form_title line-height-1-5">チーズアカデミーを<br>知った切っ掛け</td>
               <td class="form_parts">
                   <!-- プルダウン -->
-                  <select name="pull_down">
+                  <select id="selector" name="pull_down">
                       <option value="" hidden>選択してください</option>
                       <option value="google">google検索</option>
                       <option value="sns">SNS</option>
@@ -312,6 +361,7 @@
 
 </body>
 
+<!-- ここから下はJQuery -->
 <script src="https://cdn.jsdelivr.net/npm/jquery@3.6.4/dist/jquery.min.js"></script>
 <script>
 $(function () {
@@ -339,6 +389,11 @@ $("#longText5").html(lT5);
 const lT6="チーズアカデミー卒業生のコスゲさんによる<wbr>チーズだけをふんだんに使用した話題のピザ屋<wbr>「Kosuge Pizza」が渋谷でオープンしました！"
 $("#longText6").html(lT6);
 
+// Moreでのトグルアクション
+$("#toggleButton").on("click",function(){
+  $(".content").toggleClass("hidden");
+});
+
 // Saveクリックイベント
 $("#save").on("click",function(){
   const v1 = $("#text_area_namae").val();
@@ -349,6 +404,10 @@ $("#save").on("click",function(){
   localStorage.setItem("kana",v2);
   localStorage.setItem("meado",v3);
   localStorage.setItem("shousai",v4);
+// セレクター要素
+  const selectedOption = $("select[name='pull_down']").val();
+  console.log("Selected option:", selectedOption);
+  localStorage.setItem("selectedOption", selectedOption);
   // チェックボックス要素  test1 input
   // $("input[type='checkbox']").each(function(){
   //   const checkboxID = $(checkbox1).attr("id")
@@ -382,7 +441,11 @@ if(localStorage.getItem("shousai")){
   const displayShousai = localStorage.getItem("shousai");
   $("#text_area_shousai").val(displayShousai);
 }
-
+// セレクター要素
+const savedOption = localStorage.getItem("selectedOption");
+if(savedOption){
+  $("#selector").val(savedOption);
+}
 // チェックボックス要素test1 output
 // $("input[type='checkbox']").each(function(){
 //  const checkboxId = $(checkbox1).attr("id");
