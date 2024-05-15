@@ -626,10 +626,42 @@ option {
 
 /* コンタクトフォームここまで */
 
+/* 送信ボタンの調整 */
 .button_margin_ver2 {
     margin-top: 30px;
-    margin-bottom: 140px;
 }
+/* Clearボタン */
+.container_for_button2 {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.clear_button {
+    display: inline-block;
+    width: 300px;
+    height: 60px;
+    line-height: 60px;
+    background-color: white;
+    color: goldenrod;
+    font-size: 18px;
+    text-align: center;
+}
+
+.clear_button_margin {
+    margin: 30px 0 60px 0;
+}
+
+.border_line2 {
+    border: 2px solid;
+}
+
+.clear_button:hover {
+    transform: translateY(-5px);
+    cursor: pointer;
+}
+
 /* CONTACTここまで */
 
 /* Footer*/
