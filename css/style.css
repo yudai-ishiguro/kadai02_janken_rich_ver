@@ -629,6 +629,7 @@ option {
 /* 送信ボタンの調整 */
 .button_margin_ver2 {
     margin-top: 30px;
+    margin-bottom: 30px;
 }
 /* Clearボタン */
 .container_for_button2 {
@@ -650,7 +651,7 @@ option {
 }
 
 .clear_button_margin {
-    margin: 30px 0 60px 0;
+    margin: 0px 0 60px 0;
 }
 
 .border_line2 {

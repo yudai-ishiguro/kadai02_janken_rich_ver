@@ -345,9 +345,11 @@
       </table>
   </div>
 
-  <div class="container_for_button2">
+  <div class="container_for_button2" id="toggleButton2">
       <div class="button button_margin_ver2 border_line2" id="save">送信</div>
-      <div class="clear_button clear_button_margin border_line2">消去</div>
+      <div class="content hidden">
+        <div class="clear_button clear_button_margin border_line2" id="clear">消去</div>
+      </div>
  </div>
 </section>
 <!-- CONTACTここまで -->
@@ -459,6 +461,35 @@ $("#checkbox2").prop("checked", localStorage.getItem("checkbox2") === "true");
 $("#checkbox3").prop("checked", localStorage.getItem("checkbox3") === "true");
 $("#checkbox4").prop("checked", localStorage.getItem("checkbox4") === "true");
 
+// Saveボタンでのトグルアクション
+$("#toggleButton2").on("click",function(){
+  $(".content").toggleClass("hidden");
+});
+
+
+// クリアボタン
+$("#clear").on("click",function(){
+  localStorage.removeItem("namae");
+  localStorage.removeItem("kana");
+  localStorage.removeItem("meado");
+  localStorage.removeItem("shousai");
+  localStorage.removeItem("selectedOption");
+  localStorage.removeItem("checkbox1");
+  localStorage.removeItem("checkbox2");
+  localStorage.removeItem("checkbox3");
+  localStorage.removeItem("checkbox4");
+  alert("消去しました");
+  $("#text_area_namae").val("");
+  $("#text_area_kana").val("");
+  $("#text_area_meado").val("");
+  $("#text_area_shousai").val("");
+  $("#selector").val("");
+  $("#checkbox1").prop("checked", false);
+  $("#checkbox2").prop("checked", false);
+  $("#checkbox3").prop("checked", false);
+  $("#checkbox4").prop("checked", false);
+  checkedItems = {};
+});
 
 </script>
 
