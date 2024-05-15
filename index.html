@@ -341,11 +341,59 @@ $("#longText6").html(lT6);
 
 // Saveクリックイベント
 $("#save").on("click",function(){
-  const v = $("#text_area_namae").val();
-  localStorage.setItem("namae",v);
-  alert("Saveしました");
+  const v1 = $("#text_area_namae").val();
+  const v2 = $("#text_area_kana").val();
+  const v3 = $("#text_area_meado").val();
+  const v4 = $("#text_area_shousai").val(); 
+  localStorage.setItem("namae",v1);
+  localStorage.setItem("kana",v2);
+  localStorage.setItem("meado",v3);
+  localStorage.setItem("shousai",v4);
+  // チェックボックス要素  test1 input
+  // $("input[type='checkbox']").each(function(){
+  //   const checkboxID = $(checkbox1).attr("id")
+  //   const isChecked = $(checkbox1).prop("checked");
+  //   localStorage.setItem(checkboxID, isChecked)
+  // })
+  // チェックボックス要素 test2 input
+  localStorage.setItem("checkbox1",$("#checkbox1").prop("checked"));
+  localStorage.setItem("checkbox2",$("#checkbox2").prop("checked"));
+  localStorage.setItem("checkbox3",$("#checkbox3").prop("checked"));
+  localStorage.setItem("checkbox4",$("#checkbox4").prop("checked"));
+  alert("送信しました");
 })
 
+if(localStorage.getItem("namae")){
+  const displayNamae = localStorage.getItem("namae");
+  $("#text_area_namae").val(displayNamae);
+}
+
+if(localStorage.getItem("kana")){
+  const displayKana = localStorage.getItem("kana");
+  $("#text_area_kana").val(displayKana);
+}
+
+if(localStorage.getItem("meado")){
+  const displayMeado = localStorage.getItem("meado");
+  $("#text_area_meado").val(displayMeado);
+}
+
+if(localStorage.getItem("shousai")){
+  const displayShousai = localStorage.getItem("shousai");
+  $("#text_area_shousai").val(displayShousai);
+}
+
+// チェックボックス要素test1 output
+// $("input[type='checkbox']").each(function(){
+//  const checkboxId = $(checkbox1).attr("id");
+//  const isChecked = localStorage.getItem(checkboxId) === "true";
+//  $(checkbox1).prop("checked", isChecked);
+// })
+// チェックボックス要素test2 output
+$("#checkbox1").prop("checked", localStorage.getItem("checkbox1") === "true");
+$("#checkbox2").prop("checked", localStorage.getItem("checkbox2") === "true");
+$("#checkbox3").prop("checked", localStorage.getItem("checkbox3") === "true");
+$("#checkbox4").prop("checked", localStorage.getItem("checkbox4") === "true");
 
 
 </script>
