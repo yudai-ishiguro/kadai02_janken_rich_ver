@@ -123,6 +123,12 @@ section{
     position: relative;
     top:50px;
     overflow: hidden;
+    height: auto;
+}
+.mainvisual_wrapper{
+    width: 100%;
+    height: auto;
+    overflow: hidden;
 }
 .mainvisual_img{
     width: 100%;
@@ -264,8 +270,18 @@ section{
 }
 .course_content_img{
     width: 50%;
+    text-align: right;
+}
+.course_content_img2{
+    width: 50%;
+    text-align: left;
 }
 .course_content_img img{
+    max-width: 100%;
+    height: auto;
+    /* display:block; */
+}
+.course_content_img2 img{
     max-width: 100%;
     height: auto;
     display:block;
@@ -282,14 +298,14 @@ section{
 }
 .course_content2_text{
     position:relative;
-    top: 120px;
-    left: 100px;
+    top: 30%;
+    left: 30%;
     max-width: 430px;
 }
 .text_bold{
     font-weight: bolder;
 }
-@media screen and (max-width:1000px){
+@media screen and (max-width:1300px){
     .course_content{
     flex-direction: column;
     align-items:center;
